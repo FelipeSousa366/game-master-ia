@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG AI Web</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div id="character-creation" class="card">
+            <h1>Criação de Personagem</h1>
+            <div class="form-group">
+                <input type="text" id="nome" placeholder="Nome" required>
+                <input type="text" id="classe" placeholder="Classe" required>
+                <input type="text" id="origem" placeholder="Origem" required>
+                <textarea id="aparencia" placeholder="Descrição da Aparência"></textarea>
+                <textarea id="contexto" placeholder="Contexto Inicial"></textarea>
+                <button onclick="startGame()">Iniciar Jogo</button>
+            </div>
+        </div>
+
+        <div id="game-interface" class="card hidden">
+            <h1>Mundo do RPG</h1>
+            <div class="chat-container">
+                <div id="chat-history" class="chat-history"></div>
+                <div id="loading" class="loading">Mestre pensando...</div>
+                <div class="input-group">
+                    <input type="text" id="user-input" placeholder="Digite sua ação...">
+                    <button onclick="sendMessage()">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

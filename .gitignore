@@ -1,0 +1,39 @@
+# ============================================
+# Python / Flask / IA / VS Code Gitignore
+# ============================================
+
+# Virtual environments
+venv/
+.venv/
+
+# Environment variables
+.env
+*.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Flask cache / runtime
+instance/
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Compiled / build artifacts
+build/
+dist/
+*.egg-info/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Model weights
+*.pt
+*.pth
+*.ckpt
